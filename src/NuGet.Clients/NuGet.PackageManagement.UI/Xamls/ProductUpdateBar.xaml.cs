@@ -2,10 +2,8 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Diagnostics.CodeAnalysis;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Threading;
 using Microsoft.VisualStudio.Shell;
 using NuGet.VisualStudio;
 
@@ -49,7 +47,7 @@ namespace NuGet.PackageManagement.UI
             NuGetUIThreadHelper.JoinableTaskFactory.Run(async () =>
             {
                 await NuGetUIThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
-                ShowUpdateBar(e.CurrentVersion, e.NewVersion);
+                ShowUpdateBar();
             });
         }
 
@@ -78,7 +76,7 @@ namespace NuGet.PackageManagement.UI
             _productUpdateService.DeclineUpdate(true);
         }
 
-        public void ShowUpdateBar(Version currentVersion, Version newVersion)
+        public void ShowUpdateBar()
         {
             if (IsVisible)
             {
