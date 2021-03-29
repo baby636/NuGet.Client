@@ -697,7 +697,7 @@ namespace NuGet.Commands
         {
             if (_request.LockFileVersion <= 2)
             {
-                DowngradeLockFileToV2(lockFile);
+                // No Op
             }
 
             if (_request.LockFileVersion <= 1)
@@ -952,7 +952,7 @@ namespace NuGet.Commands
             // Get external project references
             // If the top level project already exists, update the package spec provided
             // with the RestoreRequest spec.
-            var updatedExternalProjects = GetProjectReferences(context);
+            var updatedExternalProjects = GetProjectReferences();
 
             // Load repositories
             // the external project provider is specific to the current restore project
@@ -1077,7 +1077,7 @@ namespace NuGet.Commands
             return allGraphs;
         }
 
-        private List<ExternalProjectReference> GetProjectReferences(RemoteWalkContext context)
+        private List<ExternalProjectReference> GetProjectReferences()
         {
             // External references
             var updatedExternalProjects = new List<ExternalProjectReference>();
@@ -1174,11 +1174,6 @@ namespace NuGet.Commands
             context.IsMsBuildBased = request.ProjectStyle != ProjectStyle.DotnetCliTool;
 
             return context;
-        }
-
-        private void DowngradeLockFileToV2(LockFile lockFile)
-        {
-            // noop
         }
 
         private void DowngradeLockFileToV1(LockFile lockFile)
