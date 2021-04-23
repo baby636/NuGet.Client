@@ -1,0 +1,2 @@
+NuGet.Commands.RestoreRequest.PackageNamespacesConfiguration.get -> NuGet.Configuration.PackageNamespacesConfiguration
+NuGet.Commands.RestoreRequest.RestoreRequest(NuGet.ProjectModel.PackageSpec project, NuGet.Commands.RestoreCommandProviders dependencyProviders, NuGet.Protocol.Core.Types.SourceCacheContext cacheContext, NuGet.Packaging.Signing.ClientPolicyContext clientPolicyContext, NuGet.Configuration.PackageNamespacesConfiguration packageNamespacesConfiguration, NuGet.Common.ILogger log) -> void

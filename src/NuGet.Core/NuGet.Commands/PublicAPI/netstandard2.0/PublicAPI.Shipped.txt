@@ -714,7 +714,6 @@ NuGet.Commands.RestoreRequest.RestoreForceEvaluate.get -> bool
 NuGet.Commands.RestoreRequest.RestoreForceEvaluate.set -> void
 NuGet.Commands.RestoreRequest.RestoreOutputPath.get -> string
 NuGet.Commands.RestoreRequest.RestoreOutputPath.set -> void
-NuGet.Commands.RestoreRequest.RestoreRequest(NuGet.ProjectModel.PackageSpec project, NuGet.Commands.RestoreCommandProviders dependencyProviders, NuGet.Protocol.Core.Types.SourceCacheContext cacheContext, NuGet.Packaging.Signing.ClientPolicyContext clientPolicyContext, NuGet.Common.ILogger log) -> void
 NuGet.Commands.RestoreRequest.ValidateRuntimeAssets.get -> bool
 NuGet.Commands.RestoreRequest.ValidateRuntimeAssets.set -> void
 NuGet.Commands.RestoreRequest.XmlDocFileSaveMode.get -> NuGet.Packaging.XmlDocFileSaveMode

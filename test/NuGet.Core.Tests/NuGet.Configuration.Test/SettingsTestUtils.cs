@@ -319,6 +319,5 @@ namespace NuGet.Configuration.Test
 
             return item1.Namespaces.OrderedEquals(item2.Namespaces, e => e.Id, StringComparer.OrdinalIgnoreCase);
         }
-
     }
 }

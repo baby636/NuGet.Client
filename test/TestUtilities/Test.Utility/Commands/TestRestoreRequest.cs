@@ -79,6 +79,7 @@ namespace NuGet.Commands.Test
                     log: log),
                 cacheContext,
                 clientPolicyContext,
+                null,
                 log)
         {
         }
@@ -151,6 +152,7 @@ namespace NuGet.Commands.Test
                     log: log),
                 cacheContext,
                 clientPolicyContext,
+                null,
                 log)
         {
             // We need the dependency graph spec to go through the proper no-op code paths
